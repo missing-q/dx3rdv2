@@ -6,6 +6,7 @@ import { DX3rdActorSheet } from './sheets/actor-sheet.mjs';
 import { DX3rdItemSheet } from './sheets/item-sheet.mjs';
 // Import helper/utility classes and constants.
 import { DX3RD } from './helpers/config.mjs';
+import { DX3rdRegisterHelpers } from './helpers/handlebars.mjs';
 // Import DataModel classes
 import * as models from './data/_module.mjs';
 
@@ -79,15 +80,6 @@ Hooks.once('init', function () {
     makeDefault: true,
     label: 'DX3RD.SheetLabels.Item',
   });
-});
-
-/* -------------------------------------------- */
-/*  Handlebars Helpers                          */
-/* -------------------------------------------- */
-
-// If you need to add Handlebars helpers, here is a useful example:
-Handlebars.registerHelper('toLowerCase', function (str) {
-  return str.toLowerCase();
 });
 
 /* -------------------------------------------- */

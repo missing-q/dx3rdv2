@@ -21,3 +21,5 @@ DX3RD.abilityAbbreviations = {
   wis: 'DX3RD.Ability.Wis.abbr',
   cha: 'DX3RD.Ability.Cha.abbr',
 };
+
+DX3RD.log_prefix = "DX3rd |"

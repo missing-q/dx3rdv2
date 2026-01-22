@@ -1,9 +1,9 @@
 {
   "DX3RD": {
     "Ability": {
-      "Str": { "long": "Strength", "abbr": "str" },
-      "Con": { "long": "Constitution", "abbr": "con" },
-      "Dex": { "long": "Dexterity", "abbr": "dex" },
+      "Melee": { "long": "Melee", "abbr": "melee", "category": false },
+      "Dodge": { "long": "Constitution", "abbr": "con" },
+      "Ride": { "long": "Dexterity", "abbr": "dex" },
       "Int": { "long": "Intelligence", "abbr": "int" },
       "Wis": { "long": "Wisdom", "abbr": "wis" },
       "Cha": { "long": "Charisma", "abbr": "cha" }
