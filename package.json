@@ -1,7 +1,7 @@
 {
   "name": "dx3rd",
   "version": "3.0.0",
-  "description": "CSS compiler for the dx3rd system",
+  "description": "CSS compiler for the DX3rd system",
   "scripts": {
     "build": "sass src/scss/dx3rd.scss css/dx3rd.css --style=expanded --no-source-map",
     "watch": "sass src/scss/dx3rd.scss css/dx3rd.css --style=expanded --source-map --watch",

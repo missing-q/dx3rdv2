@@ -6,7 +6,7 @@ const { api, sheets } = foundry.applications;
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheetV2}
  */
-export class dx3rdActorSheet extends api.HandlebarsApplicationMixin(
+export class DX3rdActorSheet extends api.HandlebarsApplicationMixin(
   sheets.ActorSheetV2
 ) {
   /** @override */
@@ -277,7 +277,7 @@ export class dx3rdActorSheet extends api.HandlebarsApplicationMixin(
   /**
    * Handle changing a Document's image.
    *
-   * @this dx3rdActorSheet
+   * @this DX3rdActorSheet
    * @param {PointerEvent} event   The originating click event
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @returns {Promise}
@@ -305,7 +305,7 @@ export class dx3rdActorSheet extends api.HandlebarsApplicationMixin(
   /**
    * Renders an embedded document's sheet
    *
-   * @this dx3rdActorSheet
+   * @this DX3rdActorSheet
    * @param {PointerEvent} event   The originating click event
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @protected
@@ -318,7 +318,7 @@ export class dx3rdActorSheet extends api.HandlebarsApplicationMixin(
   /**
    * Handles item deletion
    *
-   * @this dx3rdActorSheet
+   * @this DX3rdActorSheet
    * @param {PointerEvent} event   The originating click event
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @protected
@@ -331,7 +331,7 @@ export class dx3rdActorSheet extends api.HandlebarsApplicationMixin(
   /**
    * Handle creating a new Owned Item or ActiveEffect for the actor using initial data defined in the HTML dataset
    *
-   * @this dx3rdActorSheet
+   * @this DX3rdActorSheet
    * @param {PointerEvent} event   The originating click event
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @private
@@ -364,7 +364,7 @@ export class dx3rdActorSheet extends api.HandlebarsApplicationMixin(
   /**
    * Determines effect parent to pass to helper
    *
-   * @this dx3rdActorSheet
+   * @this DX3rdActorSheet
    * @param {PointerEvent} event   The originating click event
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @private
@@ -377,7 +377,7 @@ export class dx3rdActorSheet extends api.HandlebarsApplicationMixin(
   /**
    * Handle clickable rolls.
    *
-   * @this dx3rdActorSheet
+   * @this DX3rdActorSheet
    * @param {PointerEvent} event   The originating click event
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @protected

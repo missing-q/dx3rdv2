@@ -9,8 +9,8 @@
       "Cha": { "long": "Charisma", "abbr": "cha" }
     },
     "SheetLabels": {
-      "Actor": "dx3rd Actor Sheet",
-      "Item": "dx3rd Item Sheet"
+      "Actor": "DX3rd Actor Sheet",
+      "Item": "DX3rd Item Sheet"
     },
     "Actor": {
       "Tabs": {

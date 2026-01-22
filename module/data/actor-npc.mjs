@@ -1,6 +1,6 @@
-import dx3rdActorBase from './base-actor.mjs';
+import DX3rdActorBase from './base-actor.mjs';
 
-export default class dx3rdNPC extends dx3rdActorBase {
+export default class DX3rdNPC extends DX3rdActorBase {
   static LOCALIZATION_PREFIXES = [
     ...super.LOCALIZATION_PREFIXES,
     'DX3RD.Actor.NPC',

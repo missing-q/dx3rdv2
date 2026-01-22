@@ -7,7 +7,7 @@ const DragDrop = foundry.applications.ux.DragDrop;
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheetV2}
  */
-export class dx3rdItemSheet extends api.HandlebarsApplicationMixin(
+export class DX3rdItemSheet extends api.HandlebarsApplicationMixin(
   sheets.ItemSheetV2
 ) {
   constructor(options = {}) {
@@ -224,7 +224,7 @@ export class dx3rdItemSheet extends api.HandlebarsApplicationMixin(
   /**
    * Handle changing a Document's image.
    *
-   * @this dx3rdItemSheet
+   * @this DX3rdItemSheet
    * @param {PointerEvent} event   The originating click event
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @returns {Promise}
@@ -252,7 +252,7 @@ export class dx3rdItemSheet extends api.HandlebarsApplicationMixin(
   /**
    * Renders an embedded document's sheet
    *
-   * @this dx3rdItemSheet
+   * @this DX3rdItemSheet
    * @param {PointerEvent} event   The originating click event
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @protected
@@ -265,7 +265,7 @@ export class dx3rdItemSheet extends api.HandlebarsApplicationMixin(
   /**
    * Handles item deletion
    *
-   * @this dx3rdItemSheet
+   * @this DX3rdItemSheet
    * @param {PointerEvent} event   The originating click event
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @protected
@@ -278,7 +278,7 @@ export class dx3rdItemSheet extends api.HandlebarsApplicationMixin(
   /**
    * Handle creating a new Owned Item or ActiveEffect for the actor using initial data defined in the HTML dataset
    *
-   * @this dx3rdItemSheet
+   * @this DX3rdItemSheet
    * @param {PointerEvent} event   The originating click event
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @private
@@ -312,7 +312,7 @@ export class dx3rdItemSheet extends api.HandlebarsApplicationMixin(
   /**
    * Determines effect parent to pass to helper
    *
-   * @this dx3rdItemSheet
+   * @this DX3rdItemSheet
    * @param {PointerEvent} event   The originating click event
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @private

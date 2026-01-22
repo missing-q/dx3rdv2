@@ -1,6 +1,6 @@
-import dx3rdItemBase from './base-item.mjs';
+import DX3rdItemBase from './base-item.mjs';
 
-export default class dx3rdGear extends dx3rdItemBase {
+export default class DX3rdGear extends DX3rdItemBase {
   static LOCALIZATION_PREFIXES = [
     'DX3RD.Item.base',
     'DX3RD.Item.Gear',

@@ -1,4 +1,4 @@
-# dx3rd System
+# DX3rd System
 
 ![Foundry v11](https://img.shields.io/badge/foundry-v11-green) ![Foundry v12](https://img.shields.io/badge/foundry-v12-green)
 
@@ -6,11 +6,11 @@ This system is a dx3rd system that you can use as a starting point for building 
 
 > **Tutorial Updates are WIP**
 > 
-> The v12 branch of dx3rd has switched to using Foundry's ApplicationV2 version of document sheets, and the updates for the accompanying tutorial on the wiki are still in progress. Feel free to use this version of the system, but you'll need to use the comments within the actor and item sheet classes for context on what's happening vs. reading the tutorial.
+> The v12 branch of DX3rd has switched to using Foundry's ApplicationV2 version of document sheets, and the updates for the accompanying tutorial on the wiki are still in progress. Feel free to use this version of the system, but you'll need to use the comments within the actor and item sheet classes for context on what's happening vs. reading the tutorial.
 
 ## Usage
 
-There are two ways to get started: using the dx3rd system generator command or manually renaming and updating files.
+There are two ways to get started: using the DX3rd system generator command or manually renaming and updating files.
 
 Regardless of which method you choose, think carefully about your system's name. Your system's package name when submitted to Foundry must be formatted like `alphanumeric-lowercase`, and it must be unique. Check the Foundry systems package list for conflicts before committing to a name!
 
@@ -41,17 +41,17 @@ Copy this directory over to your Foundry systems directory and start coding!
 
 ### Manual Replacement
 
-Before installing this system, you should rename any files that have `dx3rd` in their filename to use whatever machine-safe name your system needs, such as `adnd2e` if you were building a system for 2nd edition Advanced Dungeons & Dragons. In addition, you should search through the files for `dx3rd` and `dx3rd` and do the same for those, replacing them with appropriate names for your system.
+Before installing this system, you should rename any files that have `dx3rd` in their filename to use whatever machine-safe name your system needs, such as `adnd2e` if you were building a system for 2nd edition Advanced Dungeons & Dragons. In addition, you should search through the files for `dx3rd` and `DX3rd` and do the same for those, replacing them with appropriate names for your system.
 
 The `name` property in your `system.json` file is your system's package name. This need to be formatted `alphanumeric-lowercase`, and it must also match the foldername you use for your system.
 
-### Vue 3 dx3rd
+### Vue 3 DX3rd
 
 **NOTE: The Vue 3 version is currently outdated and considered an advanced usage of Foundry due to it being a custom renderer. Only try it out if you _really_ like Vue and are feeling dangerous!**
 
 Alternatively, there's another build of this system that supports using Vue 3 components (ES module build target) for character sheet templates.
 
-Head over to the [Vue3dx3rd System](https://gitlab.com/asacolips-projects/foundry-mods/vue3dx3rd) repo if you're interested in using Vue!
+Head over to the [Vue3DX3rd System](https://gitlab.com/asacolips-projects/foundry-mods/vue3dx3rd) repo if you're interested in using Vue!
 
 ### Getting Help
 

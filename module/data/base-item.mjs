@@ -1,4 +1,4 @@
-export default class dx3rdItemBase extends foundry.abstract
+export default class DX3rdItemBase extends foundry.abstract
   .TypeDataModel {
   static defineSchema() {
     const fields = foundry.data.fields;

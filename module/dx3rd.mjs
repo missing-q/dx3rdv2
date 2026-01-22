@@ -1,9 +1,9 @@
 // Import document classes.
-import { dx3rdActor } from './documents/actor.mjs';
-import { dx3rdItem } from './documents/item.mjs';
+import { DX3rdActor } from './documents/actor.mjs';
+import { DX3rdItem } from './documents/item.mjs';
 // Import sheet classes.
-import { dx3rdActorSheet } from './sheets/actor-sheet.mjs';
-import { dx3rdItemSheet } from './sheets/item-sheet.mjs';
+import { DX3rdActorSheet } from './sheets/actor-sheet.mjs';
+import { DX3rdItemSheet } from './sheets/item-sheet.mjs';
 // Import helper/utility classes and constants.
 import { DX3RD } from './helpers/config.mjs';
 // Import DataModel classes
@@ -20,12 +20,12 @@ const sheets = foundry.appv1.sheets;
 // by downstream developers
 globalThis.dx3rd = {
   documents: {
-    dx3rdActor,
-    dx3rdItem,
+    DX3rdActor,
+    DX3rdItem,
   },
   applications: {
-    dx3rdActorSheet,
-    dx3rdItemSheet,
+    DX3rdActorSheet,
+    DX3rdItemSheet,
   },
   utils: {
     rollItemMacro,
@@ -47,20 +47,20 @@ Hooks.once('init', function () {
   };
 
   // Define custom Document and DataModel classes
-  CONFIG.Actor.documentClass = dx3rdActor;
+  CONFIG.Actor.documentClass = DX3rdActor;
 
   // Note that you don't need to declare a DataModel
   // for the base actor/item classes - they are included
   // with the Character/NPC as part of super.defineSchema()
   CONFIG.Actor.dataModels = {
-    character: models.dx3rdCharacter,
-    npc: models.dx3rdNPC,
+    character: models.DX3rdCharacter,
+    npc: models.DX3rdNPC,
   };
-  CONFIG.Item.documentClass = dx3rdItem;
+  CONFIG.Item.documentClass = DX3rdItem;
   CONFIG.Item.dataModels = {
-    gear: models.dx3rdGear,
-    feature: models.dx3rdFeature,
-    spell: models.dx3rdSpell,
+    gear: models.DX3rdGear,
+    feature: models.DX3rdFeature,
+    spell: models.DX3rdSpell,
   };
 
   // Active Effects are never copied to the Actor,
@@ -70,12 +70,12 @@ Hooks.once('init', function () {
 
   // Register sheet application classes
   collections.Actors.unregisterSheet('core', sheets.ActorSheet);
-  collections.Actors.registerSheet('dx3rd', dx3rdActorSheet, {
+  collections.Actors.registerSheet('dx3rd', DX3rdActorSheet, {
     makeDefault: true,
     label: 'DX3RD.SheetLabels.Actor',
   });
   collections.Items.unregisterSheet('core', sheets.ItemSheet);
-  collections.Items.registerSheet('dx3rd', dx3rdItemSheet, {
+  collections.Items.registerSheet('dx3rd', DX3rdItemSheet, {
     makeDefault: true,
     label: 'DX3RD.SheetLabels.Item',
   });

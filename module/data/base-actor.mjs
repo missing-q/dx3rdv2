@@ -1,4 +1,4 @@
-export default class dx3rdActorBase extends foundry.abstract
+export default class DX3rdActorBase extends foundry.abstract
   .TypeDataModel {
   static LOCALIZATION_PREFIXES = ["DX3RD.Actor.base"];
 
