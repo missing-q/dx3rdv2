@@ -1,0 +1,28 @@
+<div class="dialog-content">
+    <h2 style="display: flex; font-weight: bold;">
+      <img src="{{src}}" width="30" height="30" style="flex: 0; object-fit: cover; border: 2px solid black; border-radius: 50%;">
+      <span style="flex: 1; font-size: 20px; margin: 2px; margin-bottom: 4px;">{{name}}</span>
+    </h2>
+    
+    <fieldset>
+      <div>
+        <input type="radio" id = "guard" value="guard" name = "defense" checked>
+        <label for="guard">{{localize "DX3rd.Guard"}}</label>
+      </div>
+      {{#unless berserk}}
+      <div>
+        <input type="radio" id = "dodge" value="dodge" name = "defense">
+        <label for="dodge">{{localize "DX3rd.Dodge"}}</label>
+      </div>
+      {{/unless}}
+    </fieldset>
+
+</div>
+<div class="dialog-buttons">
+    {{#each buttons as |button id|}}
+    <button class="dialog-button" data-button="{{id}}">
+        {{{button.icon}}}
+        {{{button.label}}}
+    </button>
+    {{/each}}
+</div>
