@@ -66,16 +66,12 @@ export default class DX3rdActorBase extends foundry.abstract
       }),
     });
     
-    console.log(baseStat(0, 0))
     schema.stats = new fields.SchemaField({
       body: new fields.SchemaField(baseStat(0, 0)),
       sense: new fields.SchemaField(baseStat(0, 0)),
       mind: new fields.SchemaField(baseStat(0, 0)),
       social: new fields.SchemaField(baseStat(0, 0))
     });
-
-    //console.log ("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -- TESTING -- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-    //console.log(schema.stats)
 
     // Iterate over ability names and create a new SchemaField for each.
     
@@ -109,20 +105,23 @@ export default class DX3rdActorBase extends foundry.abstract
       this.abilities[key].mod = Math.floor(
         (this.abilities[key].value - 10) / 2
       );
-      // Handle ability label localization.
+      // Handle ability label localization`.
       this.abilities[key].label =
         game.i18n.localize(CONFIG.DX3RD.abilities[key]) ?? key;
     }
 
     // loop through skills and add in their base stat
     for (const key in this.skills){
-      baseStat = CONFIG.DX3RD.skills[key].base
-      type = CONFIG.DX3RD.skills[key].type
+      let baseStat = CONFIG.DX3RD.skills[key].stat
+      let type = CONFIG.DX3RD.skills[key].type
+      //console.log ("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -- TESTING -- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
       this.skills[key].base = this.stats[baseStat]
       // add container-specific properties
       if (type == "container"){
         this.skills[key].subskills = {}
         this.skills[key].isContainer = true
+      } else {
+        this.skills[key].isContainer = false
       }
     }
   }
