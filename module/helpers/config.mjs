@@ -22,4 +22,19 @@ DX3RD.abilityAbbreviations = {
   cha: 'DX3RD.Ability.Cha.abbr',
 };
 
+DX3RD.skills = {
+  melee: {stat: "body", type: "skill"},
+  dodge: {stat: "body", type: "skill"},
+  ride: {stat: "body", type: "container"},
+  ranged: {stat: "sense", type: "skill"},
+  perception: {stat: "sense", type: "skill"},
+  art: {stat: "sense", type: "container"},
+  rc: {stat: "mind", type: "skill"},
+  will: {stat: "mind", type: "skill"},
+  knowledge: {stat: "mind", type: "container"},
+  negotiation: {stat: "social", type: "skill"},
+  procure: {stat: "social", type: "skill"},
+  info: {stat: "social", type: "container"}
+}
+
 DX3RD.log_prefix = "DX3rd |"
