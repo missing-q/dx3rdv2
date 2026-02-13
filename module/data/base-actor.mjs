@@ -10,7 +10,6 @@ export default class DX3rdActorBase extends foundry.abstract
     function resourceField(initialValue, initialMax) {
       return {
             // Make sure to call new so you invoke the constructor!
-        min: new fields.NumberField({ ...requiredInteger, initial: 0 }),
         value: new fields.NumberField({ ...requiredInteger, initial: initialValue }),
         max: new fields.NumberField({ ...requiredInteger, initial: initialMax }),
       };
@@ -64,6 +63,8 @@ export default class DX3rdActorBase extends foundry.abstract
       level: new fields.SchemaField({
         value: new fields.NumberField({ ...requiredInteger, initial: 1 }),
       }),
+      hp : new fields.SchemaField(resourceField(0,0)),
+
     });
     
     schema.stats = new fields.SchemaField({
