@@ -37,6 +37,7 @@ globalThis.dx3rd = {
 Hooks.once('init', function () {
   // Add custom constants for configuration.
   CONFIG.DX3RD = DX3RD;
+  DX3rdRegisterHelpers.init();
 
   /**
    * Set an initiative formula for the system

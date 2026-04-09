@@ -1,5 +1,38 @@
 {{! Sheet Header }}
 <header class='sheet-header'>
+  {{! Encroachment Bar }}
+  <div class="progress-bar grid-11" style="{{encroachbar system.attributes.encroachment.value}};" >
+        <div class="dice-addon">
+          <label><i class="fas fa-dice"></i> </label>
+          <input
+            type='text'
+            name='system.attributes.encroachment.dice'
+            value='{{system.attributes.encroachment.dice}}'
+            data-dtype='Number'
+            disabled
+          />
+          <span class="slash"> | </span>
+          <label><i class="fas fa-arrow-up"></i> </label>
+          <input
+            type='text'
+            name='system.attributes.encroachment.level'
+            value='{{system.attributes.encroachment.level}}'
+            data-dtype='Number'
+            disabled
+          />
+        </div>
+        <input
+            type='text'
+            style="{{encroachtext system.attributes.encroachment.value}}; font-size: 22px;"
+            name='system.attributes.encroachment.value'
+            value='{{system.attributes.encroachment.value}}'
+            data-dtype='Number'
+            disabled
+          />
+      <div class="grid-2 backtrack-btn">
+        <button class="backtrack-roll">{{localize "DX3rd.BackTrackBtn"}}</button>
+      </div>
+  </div>
   <img
     class='profile-img'
     src='{{actor.img}}'
