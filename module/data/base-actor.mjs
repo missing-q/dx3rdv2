@@ -15,10 +15,10 @@ export default class DX3rdActorBase extends foundry.abstract
       };
     }
 
-    function baseStat(initialPoint, initialAdd) {
+    function baseStat(initialPoints, initialAdd) {
       return {
             // Make sure to call new so you invoke the constructor!
-        point: new fields.NumberField({ ...requiredInteger, initial: initialPoint }),
+        points: new fields.NumberField({ ...requiredInteger, initial: initialPoints }),
         add: new fields.NumberField({ ...requiredInteger, initial: initialAdd }),
         value: new fields.NumberField({ ...requiredInteger, initial: 0 }),
       };
@@ -29,14 +29,14 @@ export default class DX3rdActorBase extends foundry.abstract
             // Make sure to call new so you invoke the constructor!
         critical: new fields.NumberField({ ...requiredInteger, initial: initialCrit }),
         dice: new fields.NumberField({ ...requiredInteger, initial: initialDice }),
-        value: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+        add: new fields.NumberField({ ...requiredInteger, initial: 0 }),
       };
     }
 
-    function baseSkill(isTemporary, initialDice, initialPoint) {
+    function baseSkill(isTemporary, initialDice, initialPoints) {
       return {
             // Make sure to call new so you invoke the constructor!
-        point: new fields.NumberField({...requiredInteger, initial: initialPoint }),
+        points: new fields.NumberField({...requiredInteger, initial: initialPoints }),
         dice: new fields.NumberField({ ...requiredInteger, initial: initialDice }),
         value: new fields.NumberField({ ...requiredInteger, initial: 0 }),
         isTemporary: new fields.BooleanField({ initial: isTemporary }),
@@ -64,7 +64,23 @@ export default class DX3rdActorBase extends foundry.abstract
         value: new fields.NumberField({ ...requiredInteger, initial: 1 }),
       }),
       hp : new fields.SchemaField(resourceField(0,0)),
-
+      encroachment: new fields.SchemaField({
+        value: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+        level: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+        dice: new fields.NumberField({ ...requiredInteger, initial: 0 })
+      }),
+      exp : new fields.SchemaField(resourceField(0,0)),
+      saving : new fields.SchemaField(resourceField(0,0)),
+      stock : new fields.SchemaField(resourceField(0,0)),
+      dice: new fields.SchemaField({
+        major: new fields.SchemaField(baseDice(0,0)),
+        reaction: new fields.SchemaField(baseDice(0,0)),
+        dodge: new fields.SchemaField(baseDice(0,0))
+      }),
+      critical: new fields.SchemaField({
+        min: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+        value: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+      }),
     });
     
     schema.stats = new fields.SchemaField({
