@@ -1,7 +1,7 @@
 {{! Sheet Header }}
 <header class='sheet-header'>
   {{! Encroachment Bar }}
-  <div class="progress-bar grid-11" style="{{encroachbar system.attributes.encroachment.value}};" >
+  <div class="progress-bar grid" style="{{encroachbar system.attributes.encroachment.value}};" >
         <div class="dice-addon">
           <label><i class="fas fa-dice"></i> </label>
           <input
@@ -29,7 +29,7 @@
             data-dtype='Number'
             disabled
           />
-      <div class="grid-2 backtrack-btn">
+      <div class="grid grid-1col backtrack-btn">
         <button class="backtrack-roll">{{localize "DX3rd.BackTrackBtn"}}</button>
       </div>
   </div>

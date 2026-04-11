@@ -61,7 +61,7 @@ export default class DX3rdActorBase extends foundry.abstract
 
     schema.attributes = new fields.SchemaField({
       level: new fields.SchemaField({
-        value: new fields.NumberField({ ...requiredInteger, initial: 1 }),
+        value: new fields.NumberField({ ...requiredInteger, initial: 1 })
       }),
       hp : new fields.SchemaField(resourceField(0,0)),
       encroachment: new fields.SchemaField({
@@ -84,7 +84,7 @@ export default class DX3rdActorBase extends foundry.abstract
       move: new fields.SchemaField({
         combat: new fields.NumberField({ ...requiredInteger, initial: 0 }),
         full: new fields.NumberField({ ...requiredInteger, initial: 0 }),
-      }),
+      })
     });
     
     schema.stats = new fields.SchemaField({

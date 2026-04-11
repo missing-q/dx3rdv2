@@ -11,12 +11,6 @@ export default class DX3rdCharacter extends DX3rdActorBase {
     const requiredInteger = { required: true, nullable: false, integer: true };
     const schema = super.defineSchema();
 
-    schema.attributes = new fields.SchemaField({
-      level: new fields.SchemaField({
-        value: new fields.NumberField({ ...requiredInteger, initial: 1 }),
-      }),
-    });
-
     // Iterate over ability names and create a new SchemaField for each.
     schema.abilities = new fields.SchemaField(
       Object.keys(CONFIG.DX3RD.abilities).reduce((obj, ability) => {
