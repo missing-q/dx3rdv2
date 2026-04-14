@@ -28,8 +28,17 @@
       "procure": "Procure",
       "info": "Info"
     },
-    "Misc": {
-      "BackTrack": "BackTrack"
+    "misc": {
+      "backtrack": "BackTrack"
+    },
+    "attr":{
+      "hp": "HP",
+      "initiative": "Initiative",
+      "move": "Move",
+      "saving": "Saving",
+      "stock": "Stock",
+      "exp": "EXP",
+      "encroach": "Encroachment"
     },
     "SheetLabels": {
       "Actor": "DX3rd Actor Sheet",

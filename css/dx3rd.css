@@ -100,27 +100,22 @@
 @keyframes distort {
   0% {
     text-shadow: 2px 1px #ff00ff, -2px -3px #00ffff;
-    transform: translate(-1px, 1px) translate3D(-30px, 0px, 0) rotate(-0.1deg);
     cursor: crosshair;
   }
   25% {
     text-shadow: -2px -3px #ff00ff, 2px 1px #00ffff;
-    transform: translate(2px, 1px) translate3D(-30px, 0px, 0) rotate(-0.1deg);
     cursor: cell;
   }
   50% {
     text-shadow: 2px -1px #ff00ff, -4px 1px #00ffff;
-    transform: translate(-2px, 1px) translate3D(-30px, 0px, 0) rotate(-0.1deg);
     cursor: col-resize;
   }
   75% {
     text-shadow: -4px -1px #ff00ff, -2px -1px #00ffff;
-    transform: translate(3px, 1px) translate3D(-30px, 0px, 0) rotate(-0.1deg);
     cursor: move;
   }
   100% {
     text-shadow: -2px 0 #ff00ff, 2px -1px #00ffff;
-    transform: translate(-2px, 0) translate3D(-30px, 0px, 0) rotate(-0.1deg);
     cursor: all-scroll;
   }
 }
@@ -195,6 +190,26 @@
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
+.grid-13col {
+  grid-column: span 13/span 13;
+  grid-template-columns: repeat(13, minmax(0, 1fr));
+}
+
+.grid-14col {
+  grid-column: span 14/span 14;
+  grid-template-columns: repeat(14, minmax(0, 1fr));
+}
+
+.grid-15col {
+  grid-column: span 15/span 15;
+  grid-template-columns: repeat(15, minmax(0, 1fr));
+}
+
+.grid-16col {
+  grid-column: span 16/span 16;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+}
+
 .grid-start-2 {
   grid-column-start: 2;
 }
@@ -239,6 +254,22 @@
   grid-column-start: 12;
 }
 
+.grid-start-13 {
+  grid-column-start: 13;
+}
+
+.grid-start-14 {
+  grid-column-start: 14;
+}
+
+.grid-start-15 {
+  grid-column-start: 15;
+}
+
+.grid-start-16 {
+  grid-column-start: 16;
+}
+
 .grid-span-2 {
   grid-column-end: span 2;
 }
@@ -281,6 +312,22 @@
 
 .grid-span-12 {
   grid-column-end: span 12;
+}
+
+.grid-span-13 {
+  grid-column-end: span 13;
+}
+
+.grid-span-14 {
+  grid-column-end: span 14;
+}
+
+.grid-span-15 {
+  grid-column-end: span 15;
+}
+
+.grid-span-16 {
+  grid-column-end: span 16;
 }
 
 .flex-group-center,
@@ -603,43 +650,45 @@
   color: var(--dx3rd-c-white);
   gap: 0px 10px;
   padding: 0;
-}
-.dx3rd .encroach-bar .backtrack-btn {
-  background: var(--dx3rd-c-black);
-  margin: 8px;
-  grid-column-start: span 2;
+  align-items: center;
 }
 .dx3rd .encroach-bar .backtrack-btn * {
+  background: var(--dx3rd-c-black);
   font-weight: bold;
   color: var(--dx3rd-c-white);
   line-height: 22px;
   border: 2px solid var(--dx3rd-c-white);
+  border-radius: 0px;
+}
+.dx3rd .encroach-bar .encroach-title {
+  justify-self: center;
+}
+.dx3rd .encroach-bar .encroach-title * {
+  border: 0.5px solid var(--dx3rd-c-white);
+  border-radius: 0px;
+  width: 8rem;
 }
 .dx3rd .encroach-bar .progress-bar {
   text-align: center;
   position: relative;
-  grid-column-start: span 9;
-  margin: 8px;
 }
 .dx3rd .encroach-bar .progress-bar input {
   font-weight: bold;
   color: var(--dx3rd-c-white);
   background-color: rgba(0, 0, 0, 0);
+  text-align: center;
 }
 .dx3rd .encroach-bar .progress-bar .dice-addon {
   position: absolute;
-  left: 8px;
-}
-.dx3rd .encroach-bar .progress-bar .dice-addon label {
-  margin-right: 6px;
-}
-.dx3rd .encroach-bar .progress-bar .dice-addon input {
+  left: 0.5rem;
+  width: 10rem;
+  align-items: center;
+  justify-content: center;
   margin: 0;
-  width: 40px;
-  border: 0;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
 }
 .dx3rd .encroach-bar .progress-bar .encroach-value {
   font-size: 22px;
-  text-align: center;
   border: 2px solid var(--dx3rd-c-white);
 }/*# sourceMappingURL=dx3rd.css.map */

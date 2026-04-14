@@ -5,58 +5,58 @@
 
 
 .encroach-bar {
-  width:100%;
-  margin-bottom: 10px;
-  height: 44px;
-  background: $c-dark;
-  color: $c-white;
-  gap: 0px 10px;
-  padding: 0;
-}
-
-.encroach-bar .backtrack-btn {
-  background: $c-black;
-  margin: 8px;
-  grid-column-start: span 2;
+    width:100%;
+    margin-bottom: 10px;
+    height: 44px;
+    background: $c-dark;
+    color: $c-white;
+    gap: 0px 10px;
+    padding: 0;
+    align-items: center;
 }
 
 .encroach-bar .backtrack-btn * {
-  font-weight: bold;
-  color: $c-white;
-  line-height: 22px;
-  border: 2px solid $c-white;
+    background: $c-black;
+    font-weight: bold;
+    color: $c-white;
+    line-height: 22px;
+    border: 2px solid $c-white;
+    border-radius: 0px;
+}
+
+.encroach-bar .encroach-title {
+    justify-self: center;
+}
+
+.encroach-bar .encroach-title * {
+    border: 0.5px solid $c-white;
+    border-radius: 0px;
+    width: 8rem;
 }
 
 .encroach-bar .progress-bar {
-  text-align: center;
-  position: relative;
-  grid-column-start: span 9;
-  margin: 8px;
+    text-align: center;
+    position: relative;
 }
 
 .encroach-bar .progress-bar input {
-  font-weight: bold;
-  color: $c-white;
-  background-color: rgba(0,0,0,0);
+    font-weight: bold;
+    color: $c-white;
+    background-color: rgba(0,0,0,0);
+    text-align:center;
 }
 
 .encroach-bar .progress-bar .dice-addon {
     position: absolute;
-    left: 8px;
-}
-
-.encroach-bar .progress-bar .dice-addon label {
-  margin-right: 6px;
-}
-
-.encroach-bar .progress-bar .dice-addon input {
-  margin: 0;
-  width: 40px;
-  border: 0;
+    left: .5rem;
+    width: 10rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    column-gap: 0px;
 }
 
 .encroach-bar .progress-bar .encroach-value {
     font-size: 22px;
-    text-align:center;
     border: 2px solid $c-white;
 }

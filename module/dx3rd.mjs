@@ -81,6 +81,15 @@ Hooks.once('init', function () {
     makeDefault: true,
     label: 'DX3RD.SheetLabels.Item',
   });
+
+  game.settings.register("DX3rd", "flashingOff", {
+    name: "Photosensitive Effects OFF",
+    hint: "Whether or not photosensitive effects & animations should be disabled.",
+    scope: "user",       // This specifies a user-level setting
+    config: true,        // This specifies that the setting appears in the configuration view
+    type: Boolean,
+    default: false
+  });
 });
 
 /* -------------------------------------------- */

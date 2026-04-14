@@ -1,20 +1,25 @@
 {{! Sheet Header }}
 <header class='sheet-header'>
   {{! Encroachment Bar }}
-  <div class="encroach-bar grid grid-11col" >
-    <div class="progress-bar">
-      <div class="dice-addon">
-        <label><i class="fas fa-dice"></i> </label>
+  <div class="encroach-bar grid grid-16col" >
+    <div class="backtrack-btn grid-span-3 encroach-title">
+      <button class="backtrack-roll" disabled>{{localize "DX3RD.attr.encroach"}}</button>
+    </div>
+    <div class="progress-bar grid-span-11">
+      <div class="dice-addon grid grid-10col">
+        <label><i class="fas fa-dice grid-span-2"></i> </label>
         <input
+          class="grid-span-2"
           type='text'
           name='system.attributes.encroachment.dice'
           value='{{system.attributes.encroachment.dice}}'
           data-dtype='Number'
           disabled
         />
-        <span class="slash"> | </span>
-        <label><i class="fas fa-arrow-up"></i> </label>
+        <span class="slash grid-span-1"> | </span>
+        <label><i class="fas fa-arrow-up grid-span-2"></i> </label>
         <input
+          class="grid-span-2"
           type='text'
           name='system.attributes.encroachment.level'
           value='{{system.attributes.encroachment.level}}'
@@ -28,11 +33,10 @@
           name='system.attributes.encroachment.value'
           value='{{system.attributes.encroachment.value}}'
           data-dtype='Number'
-          disabled
         />
     </div>
-    <div class="backtrack-btn">
-      <button class="backtrack-roll">{{localize "DX3RD.Misc.BackTrack"}}</button>
+    <div class="backtrack-btn grid-span-2">
+      <button class="backtrack-roll">{{localize "DX3RD.misc.backtrack"}}</button>
     </div>
   </div>
   <img
