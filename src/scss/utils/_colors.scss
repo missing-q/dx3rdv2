@@ -1,5 +1,5 @@
 :root {
-  --dx3rd-c-dark: #191813;
+  --dx3rd-c-dark: #2d2d2d;
   --dx3rd-c-faint: #c9c7b8;
   --dx3rd-c-beige: #b5b3a4;
   --dx3rd-c-tan: #444444;
@@ -8,6 +8,7 @@
   --dx3rd-c-groove: #eeede0;
 }
 
+/*
 .theme-dark {
   --dx3rd-c-dark: #c9c7b8;
   --dx3rd-c-faint: #191813;
@@ -16,7 +17,7 @@
   --dx3rd-c-white: #000000;
   --dx3rd-c-black: #ffffff;
   --dx3rd-c-groove: #11121f;
-}
+}*/
 
 $c-white: var(--dx3rd-c-white);
 $c-black: var(--dx3rd-c-black);

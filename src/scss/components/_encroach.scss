@@ -1,0 +1,62 @@
+
+// -----------------------------------------
+// Encroach bar components
+// -----------------------------------------
+
+
+.encroach-bar {
+  width:100%;
+  margin-bottom: 10px;
+  height: 44px;
+  background: $c-dark;
+  color: $c-white;
+  gap: 0px 10px;
+  padding: 0;
+}
+
+.encroach-bar .backtrack-btn {
+  background: $c-black;
+  margin: 8px;
+  grid-column-start: span 2;
+}
+
+.encroach-bar .backtrack-btn * {
+  font-weight: bold;
+  color: $c-white;
+  line-height: 22px;
+  border: 2px solid $c-white;
+}
+
+.encroach-bar .progress-bar {
+  text-align: center;
+  position: relative;
+  grid-column-start: span 9;
+  margin: 8px;
+}
+
+.encroach-bar .progress-bar input {
+  font-weight: bold;
+  color: $c-white;
+  background-color: rgba(0,0,0,0);
+}
+
+.encroach-bar .progress-bar .dice-addon {
+    position: absolute;
+    left: 8px;
+}
+
+.encroach-bar .progress-bar .dice-addon label {
+  margin-right: 6px;
+}
+
+.encroach-bar .progress-bar .dice-addon input {
+  margin: 0;
+  width: 40px;
+  border: 0;
+}
+
+.encroach-bar .progress-bar .encroach-value {
+    font-size: 22px;
+    text-align:center;
+    border: 2px solid $c-white;
+}

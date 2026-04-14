@@ -28,6 +28,9 @@
       "procure": "Procure",
       "info": "Info"
     },
+    "Misc": {
+      "BackTrack": "BackTrack"
+    },
     "SheetLabels": {
       "Actor": "DX3rd Actor Sheet",
       "Item": "DX3rd Item Sheet"

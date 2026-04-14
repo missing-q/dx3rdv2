@@ -11,10 +11,10 @@ export class DX3rdActorSheet extends api.HandlebarsApplicationMixin(
 ) {
   /** @override */
   static DEFAULT_OPTIONS = {
-    classes: ['dx3rd', 'actor'],
+    classes: ['dx3rd', 'actor', 'themed', 'theme-light'],
     position: {
-      width: 600,
-      height: 600,
+      width: 850,
+      height: 730,
     },
     actions: {
       onEditImage: this._onEditImage,

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 :root {
-  --dx3rd-c-dark: #191813;
+  --dx3rd-c-dark: #2d2d2d;
   --dx3rd-c-faint: #c9c7b8;
   --dx3rd-c-beige: #b5b3a4;
   --dx3rd-c-tan: #444444;
@@ -9,6 +9,7 @@
   --dx3rd-c-groove: #eeede0;
 }
 
+/*
 .theme-dark {
   --dx3rd-c-dark: #c9c7b8;
   --dx3rd-c-faint: #191813;
@@ -17,8 +18,7 @@
   --dx3rd-c-white: #000000;
   --dx3rd-c-black: #ffffff;
   --dx3rd-c-groove: #11121f;
-}
-
+}*/
 /* Start of glitchy styles used for Encroach-related text. Credit to https://github.com/Eranziel/foundryvtt-lancer/blob/9fddbe556c39668a668999315c80fbd2a91ffd5c/src/lancer.scss#L1616 for the animations. */
 /* Animations*/
 @keyframes distort-very-subtle {
@@ -594,4 +594,52 @@
 }
 .dx3rd .effects .item .effect-controls {
   border: none;
+}
+.dx3rd .encroach-bar {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 44px;
+  background: var(--dx3rd-c-dark);
+  color: var(--dx3rd-c-white);
+  gap: 0px 10px;
+  padding: 0;
+}
+.dx3rd .encroach-bar .backtrack-btn {
+  background: var(--dx3rd-c-black);
+  margin: 8px;
+  grid-column-start: span 2;
+}
+.dx3rd .encroach-bar .backtrack-btn * {
+  font-weight: bold;
+  color: var(--dx3rd-c-white);
+  line-height: 22px;
+  border: 2px solid var(--dx3rd-c-white);
+}
+.dx3rd .encroach-bar .progress-bar {
+  text-align: center;
+  position: relative;
+  grid-column-start: span 9;
+  margin: 8px;
+}
+.dx3rd .encroach-bar .progress-bar input {
+  font-weight: bold;
+  color: var(--dx3rd-c-white);
+  background-color: rgba(0, 0, 0, 0);
+}
+.dx3rd .encroach-bar .progress-bar .dice-addon {
+  position: absolute;
+  left: 8px;
+}
+.dx3rd .encroach-bar .progress-bar .dice-addon label {
+  margin-right: 6px;
+}
+.dx3rd .encroach-bar .progress-bar .dice-addon input {
+  margin: 0;
+  width: 40px;
+  border: 0;
+}
+.dx3rd .encroach-bar .progress-bar .encroach-value {
+  font-size: 22px;
+  text-align: center;
+  border: 2px solid var(--dx3rd-c-white);
 }/*# sourceMappingURL=dx3rd.css.map */
