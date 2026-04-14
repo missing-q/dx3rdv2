@@ -10,3 +10,18 @@
 .ability-mod {
   flex: 0 0 44px;
 }
+
+.skew::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  transform: sKewX(342deg);
+}
+
+.diamond::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  transform: rotate(45deg);
+  border: 1px solid;
+}

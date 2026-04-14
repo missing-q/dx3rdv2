@@ -429,6 +429,25 @@
 .dx3rd .ability-mod {
   flex: 0 0 44px;
 }
+.dx3rd .skew::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: sKewX(342deg);
+}
+.dx3rd .diamond::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: rotate(45deg);
+  border: 1px solid;
+}
 .dx3rd .items-header {
   height: 28px;
   margin: 2px 0;
@@ -644,7 +663,7 @@
 }
 .dx3rd .encroach-bar {
   width: 100%;
-  margin-bottom: 10px;
+  margin-top: 0px;
   height: 44px;
   background: var(--dx3rd-c-dark);
   color: var(--dx3rd-c-white);
