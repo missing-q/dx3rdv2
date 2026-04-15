@@ -39,110 +39,103 @@
       <button class="backtrack-roll">{{localize "DX3RD.misc.backtrack"}}</button>
     </div>
   </div>
-  <img
+  <div class='header-fields grid grid-10col'>
+    {{! Name/Dice/Exp}}
+    {{!Name}}
+    <div class='grid-span-4'>
+      <div class = 'stat-box grid stat-long'>
+        <label class = "skew stat-label">Name</label>
+        <div class = "skew stat">
+          <input
+          class = 'name'
+          name='name'
+          type='text'
+          value='{{actor.name}}'
+          placeholder='Name'
+          />
+        </div>
+      </div>
+    </div>
+    {{!dice}}
+    <div class='grid-span-4'>
+      <div class = 'stat-box dice'>
+        <label class = "skew stat-label">Dice
+          <input
+          class = "diceval"
+          name='dice'
+          type='text'
+          value='{{system.attributes.dice.major.dice}}'
+          data-dtype='Number'
+          placeholder='?'
+          />
+        </label>
+      </div>
+      <div class = 'stat-box grid stat-mid'>
+        <label class = "skew stat-label">Dice2</label>
+        <div class = "skew stat">
+          <input
+          name='dice2'
+          type='text'
+          value='{{system.attributes.dice.major.dice}}'
+          data-dtype='Number'
+          placeholder='Name'
+          />
+        </div>
+      </div>
+    </div>
+    {{!EXP}}
+    <div class='grid-span-2'>
+      <div class = 'stat-box grid stat-mid'>
+        <label class = "skew stat-label">EXP</label>
+        <div class = "skew stat flexrow">
+          <input
+          name='exp'
+          type='text'
+          value='{{system.attributes.exp.value}}'
+          data-dtype='Number'
+          placeholder='?'
+          />
+          <span><i class="fas fa-arrow-right"></i></span>
+          <input
+          name='expmax'
+          type='text'
+          value='{{system.attributes.exp.max}}'
+          data-dtype='Number'
+          placeholder='?'
+          />
+        </div>
+      </div>
+
+      <div class = 'stat-box grid stat-mid'>
+        <label class = "skew stat-label">Stock</label>
+        <div class = "skew stat flexrow">
+          <input
+          name='exp'
+          type='text'
+          value='{{system.attributes.stock.value}}'
+          placeholder='?'
+          />
+          <span><i class="fas fa-arrow-right"></i></span>
+          <input
+          name='expmax'
+          type='text'
+          value='{{system.attributes.stock.max}}'
+          placeholder='?'
+          />
+        </div>
+      </div>
+    </div>
+
+    <img
     class='profile-img'
     src='{{actor.img}}'
     data-edit='img'
     data-action='onEditImage'
     data-tooltip='{{actor.name}}'
-    height='100'
-    width='100'
-  />
-  <div class='header-fields'>
-    <div class='document-name'>
-      <input
-        name='name'
-        type='text'
-        value='{{actor.name}}'
-        placeholder='Name'
-      />
-    </div>
+    />
     {{! The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
       from 1 to 12 and will create that number of columns.  }}
-    <div class='resources grid grid-3col'>
-
-      {{! "flex-group-center" is also defined in the _grid.scss file
-        and it will add a small amount of padding, a border, and will
-        center all of its child elements content and text. }}
-      <div class='resource flex-group-center'>
-        <label for='system.health.value' class='resource-label'>
-          {{localize 'DX3RD.Actor.base.FIELDS.health.value.label'}}
-        </label>
-        <div class='resource-content flexrow flex-center flex-between'>
-          <input
-            type='text'
-            name='system.health.value'
-            value='{{system.health.value}}'
-            data-dtype='Number'
-          />
-          <span> / </span>
-          <input
-            type='text'
-            name='system.health.max'
-            value='{{system.health.max}}'
-            data-dtype='Number'
-          />
-        </div>
-      </div>
-
-      <div class='resource flex-group-center'>
-        <label for='system.power.value' class='resource-label'>
-          {{localize 'DX3RD.Actor.base.FIELDS.power.value.label'}}
-        </label>
-        <div class='resource-content flexrow flex-center flex-between'>
-          <input
-            type='text'
-            name='system.power.value'
-            value='{{system.power.value}}'
-            data-dtype='Number'
-          />
-          <span> / </span>
-          <input
-            type='text'
-            name='system.power.max'
-            value='{{system.power.max}}'
-            data-dtype='Number'
-          />
-        </div>
-      </div>
-
-      <div class='resource flex-group-center'>
-        {{#if (eq actor.type 'character')}}
-          <label class='resource-label'>
-            {{localize 'DX3RD.Actor.Character.FIELDS.attributes.level.value.label'}}
-          </label>
-          <div class='resource-content flexrow flex-center flex-between'>
-            <input
-              type='text'
-              name='system.attributes.level.value'
-              value='{{system.attributes.level.value}}'
-              data-dtype='Number'
-            />
-          </div>
-        {{/if}}
-        {{#if (eq actor.type 'npc')}}
-          <label class='resource-label'>
-            {{localize 'DX3RD.Actor.NPC.FIELDS.cr.label'}} / {{localize 'DX3RD.Actor.NPC.xp.label'}}
-          </label>
-          <div class='resource-content flexrow flex-center flex-between'>
-            <input
-              type='text'
-              name='system.cr'
-              value='{{system.cr}}'
-              data-dtype='Number'
-            />
-            <span></span>
-            <input
-              type='text'
-              disabled='true'
-              name='system.xp'
-              value='{{system.xp}}'
-              data-dtype='Number'
-            />
-          </div>
-        {{/if}}
-      </div>
-    </div>
+    
   </div>
 </header>

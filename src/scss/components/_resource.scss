@@ -11,6 +11,10 @@
   flex: 0 0 44px;
 }
 
+input {
+
+}
+
 .skew::before {
   content: "";
   position: absolute;
@@ -24,4 +28,71 @@
   top: 0; bottom: 0; left: 0; right: 0;
   transform: rotate(45deg);
   border: 1px solid;
+}
+
+.stat-box {
+  position: relative;
+  margin-bottom: 1rem;
+  margin-top: 0px;
+  flex: 1;
+}
+
+.stat-label {
+  display: flex;
+  position: relative;
+  background: transparent;
+
+  color: $c-white;
+  text-align: center;
+  font-weight: bold;
+  padding: .5rem 1rem;
+  z-index: 2;
+  align-items: center; 
+  justify-content: center;
+}
+
+.stat-label::before {
+  z-index: -1;
+  background: $c-black;
+}
+
+.stat::before {
+  z-index: 0;
+  background: $c-white;
+  border: 1px solid $c-black;
+}
+
+.stat input {
+  background: $none;
+  border: none !important;
+  outline-color: $none !important;
+  z-index: 1;
+  text-align: center;
+  position: relative;
+  box-shadow: none;
+}
+
+.stat-long {
+  grid-template-columns: 1fr 6fr;
+}
+.stat-mid {
+  grid-template-columns: 3fr 4fr;
+}
+
+input.name {
+  text-align: left;
+}
+
+.stat-box.dice {
+  height: 2rem;
+}
+
+input.diceval {
+  position: absolute;
+  height: 1.8rem;
+  top: .2rem;
+  right: 1rem;
+  background-color:$c_white;
+  width: 2rem;
+  text-align: center;
 }

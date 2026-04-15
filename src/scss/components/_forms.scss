@@ -4,7 +4,7 @@
 
 .sheet-header {
   flex: 0 auto;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -12,9 +12,10 @@
   margin-bottom: 10px;
 
   .profile-img {
-    flex: 0 0 100px;
-    height: 100px;
-    margin-right: 10px;
+    grid-row: span 2;
+    grid-column: span 2;
+    text-align: center;
+    border: 1px solid $c_black
   }
 
   .header-fields {
