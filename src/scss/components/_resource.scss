@@ -96,3 +96,13 @@ input.diceval {
   width: 2rem;
   text-align: center;
 }
+
+.divider {
+  flex: none;
+  z-index: 1;
+}
+
+.stat-grid {
+  display: flex;
+  gap: 10px;
+}

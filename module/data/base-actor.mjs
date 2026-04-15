@@ -84,7 +84,10 @@ export default class DX3rdActorBase extends foundry.abstract
       move: new fields.SchemaField({
         combat: new fields.NumberField({ ...requiredInteger, initial: 0 }),
         full: new fields.NumberField({ ...requiredInteger, initial: 0 }),
-      })
+      }),
+      initiative: new fields.SchemaField({
+        value: new fields.NumberField({ ...requiredInteger, initial: 1 })
+      }),
     });
     
     schema.stats = new fields.SchemaField({

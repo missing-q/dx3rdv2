@@ -66,7 +66,6 @@
           type='text'
           value='{{system.attributes.dice.major.dice}}'
           data-dtype='Number'
-          placeholder='?'
           />
         </label>
       </div>
@@ -78,11 +77,11 @@
           type='text'
           value='{{system.attributes.dice.major.dice}}'
           data-dtype='Number'
-          placeholder='Name'
           />
         </div>
       </div>
     </div>
+
     {{!EXP}}
     <div class='grid-span-2'>
       <div class = 'stat-box grid stat-mid'>
@@ -93,19 +92,18 @@
           type='text'
           value='{{system.attributes.exp.value}}'
           data-dtype='Number'
-          placeholder='?'
           />
-          <span><i class="fas fa-arrow-right"></i></span>
+          <span class="divider"><i class="fas fa-arrow-right"></i></span>
           <input
           name='expmax'
           type='text'
           value='{{system.attributes.exp.max}}'
           data-dtype='Number'
-          placeholder='?'
           />
         </div>
       </div>
-
+      
+      {{!Stock}}
       <div class = 'stat-box grid stat-mid'>
         <label class = "skew stat-label">Stock</label>
         <div class = "skew stat flexrow">
@@ -113,14 +111,14 @@
           name='exp'
           type='text'
           value='{{system.attributes.stock.value}}'
-          placeholder='?'
+          data-dtype='Number'
           />
-          <span><i class="fas fa-arrow-right"></i></span>
+          <span class="divider"><i class="fas fa-arrow-right"></i></span>
           <input
           name='expmax'
           type='text'
           value='{{system.attributes.stock.max}}'
-          placeholder='?'
+          data-dtype='Number'
           />
         </div>
       </div>
@@ -136,6 +134,82 @@
     {{! The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
       from 1 to 12 and will create that number of columns.  }}
-    
+
+    <div class="grid-span-8 stat-grid">
+      {{!HP}}
+      <div class = 'stat-box grid stat-mid'>
+        <label class = "skew stat-label">HP</label>
+        <div class = "skew stat flexrow">
+          <input
+          name='HP'
+          type='text'
+          value='{{system.attributes.hp.value}}'
+          data-dtype='Number'
+          />
+          <span class="divider">/</i></span>
+          <input
+          name='HPmax'
+          type='text'
+          value='{{system.attributes.hp.max}}'
+          data-dtype='Number'
+          />
+        </div>
+      </div>
+
+      {{!Initiative}}
+      <div class = 'stat-box grid stat-mid'>
+        <label class = "skew stat-label">Initiative</label>
+        <div class = "skew stat flexrow">
+          <input
+          name='initiative'
+          type='text'
+          value='{{system.attributes.initiative.value}}'
+          data-dtype='Number'
+          />
+        </div>
+      </div>
+
+      {{!Move}}
+      <div class = 'stat-box grid stat-mid'>
+        <label class = "skew stat-label">Move</label>
+        <div class = "skew stat flexrow">
+          <input
+          name='MoveCombat'
+          type='text'
+          value='{{system.attributes.move.combat}}'
+          data-dtype='Number'
+          />
+          <span class="divider">/</i></span>
+          <input
+          name='MoveFull'
+          type='text'
+          value='{{system.attributes.move.full}}'
+          data-dtype='Number'
+          />
+        </div>
+      </div>
+
+      {{!saving}}
+      <div class = 'stat-box grid stat-mid'>
+        <label class = "skew stat-label">Saving</label>
+        <div class = "skew stat flexrow">
+          <input
+          name='saving'
+          type='text'
+          value='{{system.attributes.saving.value}}'
+          data-dtype='Number'
+          />
+          <span class="divider">/</i></span>
+          <input
+          name='savingmax'
+          type='text'
+          value='{{system.attributes.saving.max}}'
+          data-dtype='Number'
+          />
+        </div>
+      </div>
+    </div>
   </div>
+
+  
 </header>

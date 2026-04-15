@@ -506,6 +506,14 @@
   width: 2rem;
   text-align: center;
 }
+.dx3rd .divider {
+  flex: none;
+  z-index: 1;
+}
+.dx3rd .stat-grid {
+  display: flex;
+  gap: 10px;
+}
 .dx3rd .items-header {
   height: 28px;
   margin: 2px 0;
