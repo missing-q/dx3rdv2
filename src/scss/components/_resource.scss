@@ -11,8 +11,17 @@
   flex: 0 0 44px;
 }
 
-input {
+select {
+  background: $c_black;
+  color: $c_white;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: bold;
+}
 
+select option {
+  color: $c_black;
+  text-align: center;
 }
 
 .skew::before {
@@ -83,6 +92,7 @@ input.name {
   text-align: left;
 }
 
+
 .stat-box.dice {
   height: 2rem;
 }
@@ -92,9 +102,7 @@ input.diceval {
   height: 1.8rem;
   top: .2rem;
   right: 1rem;
-  background-color:$c_white;
-  width: 2rem;
-  text-align: center;
+  width: 2.4rem;
 }
 
 .divider {
@@ -105,4 +113,21 @@ input.diceval {
 .stat-grid {
   display: flex;
   gap: 10px;
+}
+
+.dice-info {
+  padding: 0 .3rem;
+}
+
+.dice-info input {
+  background-color:$c_white;
+  text-align: center;
+}
+
+.dice-info .grid {
+  align-items: center;
+}
+
+.dice-info .slash {
+  text-align: center;
 }

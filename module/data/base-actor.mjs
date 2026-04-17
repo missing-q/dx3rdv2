@@ -27,9 +27,9 @@ export default class DX3rdActorBase extends foundry.abstract
     function baseDice(initialDice, initialCrit) {
       return {
             // Make sure to call new so you invoke the constructor!
-        critical: new fields.NumberField({ ...requiredInteger, initial: initialCrit }),
-        dice: new fields.NumberField({ ...requiredInteger, initial: initialDice }),
-        add: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+        critMod: new fields.NumberField({ ...requiredInteger, initial: initialCrit }),
+        diceMod: new fields.NumberField({ ...requiredInteger, initial: initialDice }),
+        addMod: new fields.NumberField({ ...requiredInteger, initial: 0 }),
       };
     }
 
@@ -59,6 +59,18 @@ export default class DX3rdActorBase extends foundry.abstract
 
     schema.biography = new fields.HTMLField();
 
+    schema.info = new fields.SchemaField({
+      codename: new fields.StringField({initial:"", blank: true}),
+      cover: new fields.StringField({initial:"", blank: true}),
+      origin: new fields.StringField({initial:"", blank: true}),
+      experience: new fields.StringField({initial:"", blank: true}),
+      encounter: new fields.StringField({initial:"", blank: true}),
+      awaken: new fields.StringField({initial:"", blank: true}),
+      impulse: new fields.StringField({initial:"", blank: true}),
+      desire: new fields.StringField({initial:"", blank: true}),
+      description: new fields.HTMLField()
+    });
+
     schema.attributes = new fields.SchemaField({
       level: new fields.SchemaField({
         value: new fields.NumberField({ ...requiredInteger, initial: 1 })
@@ -75,11 +87,17 @@ export default class DX3rdActorBase extends foundry.abstract
       dice: new fields.SchemaField({
         major: new fields.SchemaField(baseDice(0,0)),
         reaction: new fields.SchemaField(baseDice(0,0)),
-        dodge: new fields.SchemaField(baseDice(0,0))
-      }),
-      critical: new fields.SchemaField({
-        min: new fields.NumberField({ ...requiredInteger, initial: 0 }),
-        value: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+        dodge: new fields.SchemaField(baseDice(0,0)),
+        view: new fields.StringField({initial:"major", blank: true}),
+        //universal fields defined separately from basedice since this is a baseline, not a modifier
+        universal: new fields.SchemaField({
+          critical: new fields.SchemaField({
+            min: new fields.NumberField({ ...requiredInteger, initial: 10 }),
+            value: new fields.NumberField({ ...requiredInteger, initial: 10 })
+          }),
+          dice: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+          add: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+        })
       }),
       move: new fields.SchemaField({
         combat: new fields.NumberField({ ...requiredInteger, initial: 0 }),
@@ -148,6 +166,7 @@ export default class DX3rdActorBase extends foundry.abstract
         this.skills[key].isContainer = false
       }
     }
+    
   }
 
 }

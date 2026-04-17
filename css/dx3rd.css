@@ -430,6 +430,17 @@
 .dx3rd .ability-mod {
   flex: 0 0 44px;
 }
+.dx3rd select {
+  background: var(--dx3rd-c-black);
+  color: var(--dx3rd-c-white);
+  border-radius: 3px;
+  text-align: center;
+  font-weight: bold;
+}
+.dx3rd select option {
+  color: var(--dx3rd-c-black);
+  text-align: center;
+}
 .dx3rd .skew::before {
   content: "";
   position: absolute;
@@ -502,9 +513,7 @@
   height: 1.8rem;
   top: 0.2rem;
   right: 1rem;
-  background-color: var(--dx3rd-c-white);
-  width: 2rem;
-  text-align: center;
+  width: 2.4rem;
 }
 .dx3rd .divider {
   flex: none;
@@ -513,6 +522,19 @@
 .dx3rd .stat-grid {
   display: flex;
   gap: 10px;
+}
+.dx3rd .dice-info {
+  padding: 0 0.3rem;
+}
+.dx3rd .dice-info input {
+  background-color: var(--dx3rd-c-white);
+  text-align: center;
+}
+.dx3rd .dice-info .grid {
+  align-items: center;
+}
+.dx3rd .dice-info .slash {
+  text-align: center;
 }
 .dx3rd .items-header {
   height: 28px;

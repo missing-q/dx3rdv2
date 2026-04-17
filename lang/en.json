@@ -8,37 +8,30 @@
       "Wis": { "long": "Wisdom", "abbr": "wis" },
       "Cha": { "long": "Charisma", "abbr": "cha" }
     },
-    "stats": {
-      "body": "Body",
-      "sense": "Sense",
-      "mind": "Mind",
-      "social": "Social"
+    "Stats": {
+      "Body": "Body",
+      "Sense": "Sense",
+      "Mind": "Mind",
+      "Social": "Social"
     },
-    "skills": {
-      "melee": "Melee",
-      "dodge": "Dodge",
-      "ride": "Ride",
-      "ranged": "Ranged",
-      "perception": "Perception",
-      "art": "Art",
-      "rc": "R.C.",
-      "will": "Will",
-      "knowledge": "Knowledge",
-      "negotiation": "Negotiation",
-      "procure": "Procure",
-      "info": "Info"
+    "Skills": {
+      "Melee": "Melee",
+      "Dodge": "Dodge",
+      "Ride": "Ride",
+      "Ranged": "Ranged",
+      "Perception": "Perception",
+      "Art": "Art",
+      "RC": "R.C.",
+      "Will": "Will",
+      "Knowledge": "Knowledge",
+      "Negotiation": "Negotiation",
+      "Procure": "Procure",
+      "Info": "Info"
     },
-    "misc": {
-      "backtrack": "BackTrack"
-    },
-    "attr":{
-      "hp": "HP",
-      "initiative": "Initiative",
-      "move": "Move",
-      "saving": "Saving",
-      "stock": "Stock",
-      "exp": "EXP",
-      "encroach": "Encroachment"
+    "ActionTypes":{
+      "Major": "Major",
+      "Reaction": "Reaction",
+      "Dodge": "Dodge"
     },
     "SheetLabels": {
       "Actor": "DX3rd Actor Sheet",
@@ -52,18 +45,32 @@
         "Spells": "Spells",
         "Effects": "Effects"
       },
-      "base": {
-        "FIELDS": {
-          "biography": {"label": "Biography"},
-          "health": {
-            "value": {"label": "Health"},
-            "max": {"label": "Maximum Health"}
-          },
-          "power": {
-            "value": {"label": "Power"},
-            "max": {"label": "Maximum Power"}
-          }
+      "FIELDS": {
+        "Attributes":{
+          "HP": "HP",
+          "Initiative": "Initiative",
+          "Move": "Move",
+          "Saving": "Saving",
+          "Stock": "Stock",
+          "EXP": "EXP",
+          "Encroach": "Encroachment"
+        },
+        "Info": {
+          "Name": "Name",
+          "Codename": "Codename",
+          "Cover": "Cover",
+          "Origin": "Origin",
+          "Experience": "Experience",
+          "Encounter": "Encounter",
+          "Awaken": "Awaken",
+          "Impulse": "Impulse",
+          "Desire": "Desire",
+          "Description": "Description"
         }
+      },
+      "UI": {
+        "Backtrack": "BackTrack",
+        "Dice": "Dice"
       },
       "Character": {
         "FIELDS": {

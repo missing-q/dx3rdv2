@@ -3,7 +3,7 @@
   {{! Encroachment Bar }}
   <div class="encroach-bar grid grid-16col" >
     <div class="backtrack-btn grid-span-3 encroach-title">
-      <button class="backtrack-roll" disabled>{{localize "DX3RD.attr.encroach"}}</button>
+      <button class="backtrack-roll" disabled>{{localize "DX3RD.Actor.FIELDS.Attributes.Encroach"}}</button>
     </div>
     <div class="progress-bar grid-span-11">
       <div class="dice-addon grid grid-10col">
@@ -36,15 +36,16 @@
         />
     </div>
     <div class="backtrack-btn grid-span-2">
-      <button class="backtrack-roll">{{localize "DX3RD.misc.backtrack"}}</button>
+      <button class="backtrack-roll">{{localize "DX3RD.Actor.UI.Backtrack"}}</button>
     </div>
   </div>
+
   <div class='header-fields grid grid-10col'>
-    {{! Name/Dice/Exp}}
-    {{!Name}}
-    <div class='grid-span-4'>
+
+    <div class='grid-span-4 names'>
+      {{!Name}}
       <div class = 'stat-box grid stat-long'>
-        <label class = "skew stat-label">Name</label>
+        <label class = "skew stat-label">{{localize "DX3RD.Actor.FIELDS.Info.Name"}}</label>
         <div class = "skew stat">
           <input
           class = 'name'
@@ -55,29 +56,46 @@
           />
         </div>
       </div>
+
+      {{!CodeName}}
+      <div class = 'stat-box grid stat-long'>
+        <label class = "skew stat-label">{{localize "DX3RD.Actor.FIELDS.Info.Codename"}}</label>
+        <div class = "skew stat">
+          <input
+          class = 'name'
+          name='codename'
+          type='text'
+          value='{{system.info.codename}}'
+          placeholder='CodeName'
+          />
+        </div>
+      </div>
+
     </div>
     {{!dice}}
-    <div class='grid-span-4'>
+    <div class='grid-span-4 dice-info'>
       <div class = 'stat-box dice'>
-        <label class = "skew stat-label">Dice
+        <label class = "skew stat-label">{{localize "DX3RD.Actor.UI.Dice"}}
           <input
           class = "diceval"
-          name='dice'
+          name='critmin'
           type='text'
-          value='{{system.attributes.dice.major.dice}}'
+          value='{{system.attributes.dice.universal.critical.min}}'
           data-dtype='Number'
           />
         </label>
       </div>
-      <div class = 'stat-box grid stat-mid'>
-        <label class = "skew stat-label">Dice2</label>
-        <div class = "skew stat">
-          <input
-          name='dice2'
-          type='text'
-          value='{{system.attributes.dice.major.dice}}'
-          data-dtype='Number'
-          />
+      <div class = 'stat-box stat-mid'>
+        <div class="grid grid-12col">
+          <select name="system.attributes.dice.view" value = "{{system.attributes.dice.view}}" class="grid-span-4">
+            {{selectOptions actionTypes selected=system.attributes.dice.view valueAttr="key" labelAttr="label" localize=true}}
+          </select>
+          {{!Calculate dice values with handlebars}}
+          <input type="text" id="dice" class="grid-span-2" value="{{dice actor system.attributes.dice.view}}" disabled> 
+          <span class="slash grid-span-1"> DX </span>
+          <input type="text" id="critical" class="grid-span-2" value="{{critical actor system.attributes.dice.view}}" disabled>
+          <span class="slash grid-span-1"> + </span>
+          <input type="text" id="add" class="grid-span-2" value="{{add actor system.attributes.dice.view}}" disabled>
         </div>
       </div>
     </div>
@@ -85,7 +103,7 @@
     {{!EXP}}
     <div class='grid-span-2'>
       <div class = 'stat-box grid stat-mid'>
-        <label class = "skew stat-label">EXP</label>
+        <label class = "skew stat-label">{{localize "DX3RD.Actor.FIELDS.Attributes.EXP"}}</label>
         <div class = "skew stat flexrow">
           <input
           name='exp'
@@ -105,7 +123,7 @@
       
       {{!Stock}}
       <div class = 'stat-box grid stat-mid'>
-        <label class = "skew stat-label">Stock</label>
+        <label class = "skew stat-label">{{localize "DX3RD.Actor.FIELDS.Attributes.Stock"}}</label>
         <div class = "skew stat flexrow">
           <input
           name='exp'
@@ -138,7 +156,7 @@
     <div class="grid-span-8 stat-grid">
       {{!HP}}
       <div class = 'stat-box grid stat-mid'>
-        <label class = "skew stat-label">HP</label>
+        <label class = "skew stat-label">{{localize "DX3RD.Actor.FIELDS.Attributes.HP"}}</label>
         <div class = "skew stat flexrow">
           <input
           name='HP'
@@ -158,7 +176,7 @@
 
       {{!Initiative}}
       <div class = 'stat-box grid stat-mid'>
-        <label class = "skew stat-label">Initiative</label>
+        <label class = "skew stat-label">{{localize "DX3RD.Actor.FIELDS.Attributes.Initiative"}}</label>
         <div class = "skew stat flexrow">
           <input
           name='initiative'
@@ -171,7 +189,7 @@
 
       {{!Move}}
       <div class = 'stat-box grid stat-mid'>
-        <label class = "skew stat-label">Move</label>
+        <label class = "skew stat-label">{{localize "DX3RD.Actor.FIELDS.Attributes.Move"}}</label>
         <div class = "skew stat flexrow">
           <input
           name='MoveCombat'
@@ -191,7 +209,7 @@
 
       {{!saving}}
       <div class = 'stat-box grid stat-mid'>
-        <label class = "skew stat-label">Saving</label>
+        <label class = "skew stat-label">{{localize "DX3RD.Actor.FIELDS.Attributes.Saving"}}</label>
         <div class = "skew stat flexrow">
           <input
           name='saving'

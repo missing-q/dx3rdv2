@@ -35,6 +35,42 @@ export class DX3rdRegisterHelpers {
       }
     });
 
+    /**
+     * Function for returning dice values based off selected dice view.
+     * @param {Actor} arg Actor whose sheet we are viewing
+     * @param {String} arg Currently selected dice view
+     * 
+     */
+    Handlebars.registerHelper('dice', function(actor, arg) {
+      let mod = actor.system.attributes.dice[arg].diceMod;
+      let val = actor.system.attributes.dice.universal.dice;
+      return val + mod;
+    });
+
+    /**
+     * Function for returning add values based off selected dice view.
+     * @param {Actor} arg Actor whose sheet we are viewing
+     * @param {String} arg Currently selected dice view
+     * 
+     */
+    Handlebars.registerHelper('add', function(actor, arg) {
+      let mod = actor.system.attributes.dice[arg].addMod;
+      let val = actor.system.attributes.dice.universal.add;
+      return val + mod;
+    });
+
+    /**
+     * Function for returning critical values based off selected dice view.
+     * @param {Actor} arg Actor whose sheet we are viewing
+     * @param {String} arg Currently selected dice view
+     * 
+     */
+    Handlebars.registerHelper('critical', function(actor, arg) {
+      let mod = actor.system.attributes.dice[arg].critMod;
+      let val = actor.system.attributes.dice.universal.critical.value;
+      return (val + mod) < actor.system.attributes.dice.universal.critical.min ? actor.system.attributes.dice.universal.critical.min : (val + mod)
+    });
+
 
   }
 }

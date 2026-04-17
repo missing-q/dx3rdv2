@@ -106,6 +106,8 @@ export class DX3rdActorSheet extends api.HandlebarsApplicationMixin(
     // Offloading context prep to a helper function
     this._prepareItems(context);
 
+    context.actionTypes = {major: {key: "major", label: "DX3RD.ActionTypes.Major"}, reaction: {key: "reaction", label: "DX3RD.ActionTypes.Reaction"}, dodge: {key: "dodge", label: "DX3RD.ActionTypes.Dodge"}};
+
     return context;
   }
 
