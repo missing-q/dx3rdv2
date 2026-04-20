@@ -108,6 +108,14 @@ export class DX3rdActorSheet extends api.HandlebarsApplicationMixin(
 
     context.actionTypes = {major: {key: "major", label: "DX3RD.ActionTypes.Major"}, reaction: {key: "reaction", label: "DX3RD.ActionTypes.Reaction"}, dodge: {key: "dodge", label: "DX3RD.ActionTypes.Dodge"}};
 
+    //Prepping skill buckets
+    context.skills = { body: {}, sense: {}, mind: {}, social: {}}
+    for (const [key, skill] of Object.entries(this.actor.system.skills)){
+      let base = skill.base;
+      let bucket = context.skills[base]
+      bucket[key] = skill;
+    }
+
     return context;
   }
 

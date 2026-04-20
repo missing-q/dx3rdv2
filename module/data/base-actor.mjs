@@ -157,7 +157,7 @@ export default class DX3rdActorBase extends foundry.abstract
       let baseStat = CONFIG.DX3RD.skills[key].stat
       let type = CONFIG.DX3RD.skills[key].type
       //console.log ("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -- TESTING -- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-      this.skills[key].base = this.stats[baseStat]
+      this.skills[key].base = baseStat
       // add container-specific properties
       if (type == "container"){
         this.skills[key].subskills = {}

@@ -227,6 +227,36 @@
         </div>
       </div>
     </div>
+
+
+    <div class="grid-span-8 main-grid">
+      
+      {{!Repeat for all skills}}
+      {{log skills}}
+      {{#each skills as |sVal sKey|}}
+      {{log 'stat parameters' sKey sVal}}
+      <div class="stat-box ability" data-ability-id="{{sKey}}">
+        <label class="title ability-roll">{{localize (concat "DX3RD.Stats." (capitalizeFirst sKey))}}</label>
+        <a class="skill-create" data-ability-id="body"><i class="fas fa-plus" style="color: white;"></i></a>
+        <div class="value">
+          <input class="stat" type="text" name="system.attributes.{{sKey}}.value" value="{{stat ../actor sKey 'value'}}" disabled>
+        </div>
+        <div class="diamond">
+          <input class="point highlight" type="text" name="system.attributes.{{sKey}}.points" value="{{stat ../actor sKey 'points'}}" data-dtype="Number"/> 
+        </div>
+        <div class="skill-box">
+        {{#each sVal as |value key|}}
+          <label class="skill" data-skill-id="{{key}}">
+            <span class="title skill-roll">{{localize (concat "DX3RD.Skills." (capitalizeFirst key))}}</span>
+            <a class="skill-edit"><i class="fas fa-edit" style="color: black;"></i></a>
+          </label>
+        {{/each}}
+        </div>
+      </div>
+      {{/each}}
+
+    </div>
+
   </div>
 
   

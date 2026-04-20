@@ -5,6 +5,29 @@ export class DX3rdRegisterHelpers {
   static init() {
 
     /**
+     * Helper function for concatenating two strings.
+     * @param {String} str1 First string
+     * @param {String} str2 Second string
+     * 
+     */
+    Handlebars.registerHelper('concat', function(str1, str2) {
+      return str1.concat(str2);
+    });
+
+    /**
+     * Helper function for capitalizing the first letter of a string.
+     * @param {String} arg String we want to capitalize
+     * 
+     */
+    Handlebars.registerHelper('capitalizeFirst', function(arg) {
+      if (arg == 'rc') { //special exceptions for strings that should be all-uppercased
+        return String(arg).toUpperCase();
+      } else {
+        return String(arg).charAt(0).toUpperCase() + String(arg).slice(1);
+      }
+    });
+
+    /**
      * Function for returning different styling based off of Encroach value.
      * @param {Number} arg Encroach value
      * 
@@ -37,7 +60,7 @@ export class DX3rdRegisterHelpers {
 
     /**
      * Function for returning dice values based off selected dice view.
-     * @param {Actor} arg Actor whose sheet we are viewing
+     * @param {Actor} actor Actor whose sheet we are viewing
      * @param {String} arg Currently selected dice view
      * 
      */
@@ -49,7 +72,7 @@ export class DX3rdRegisterHelpers {
 
     /**
      * Function for returning add values based off selected dice view.
-     * @param {Actor} arg Actor whose sheet we are viewing
+     * @param {Actor} actor Actor whose sheet we are viewing
      * @param {String} arg Currently selected dice view
      * 
      */
@@ -61,7 +84,7 @@ export class DX3rdRegisterHelpers {
 
     /**
      * Function for returning critical values based off selected dice view.
-     * @param {Actor} arg Actor whose sheet we are viewing
+     * @param {Actor} actor Actor whose sheet we are viewing
      * @param {String} arg Currently selected dice view
      * 
      */
@@ -71,6 +94,17 @@ export class DX3rdRegisterHelpers {
       return (val + mod) < actor.system.attributes.dice.universal.critical.min ? actor.system.attributes.dice.universal.critical.min : (val + mod)
     });
 
+    /**
+     * Function for returning stat values based off variable inputs.
+     * @param {Actor} actor Actor whose sheet we are viewing
+     * @param {String} stat Stat we are accessing
+     * @param {String} val Stat parameter we want to return
+     * 
+     */
+    Handlebars.registerHelper('stat', function(actor, stat, val) {
+      let tmp = actor.system.stats[stat]
+      return tmp[val]
+    });
 
   }
 }
