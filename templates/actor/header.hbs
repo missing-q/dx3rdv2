@@ -229,16 +229,16 @@
     </div>
 
 
-    <div class="grid-span-8 main-grid">
+    <div class="grid-span-8 stat-grid">
       
-      {{!Repeat for all skills}}
+      {{!Repeat for all stats}}
       {{log skills}}
       {{#each skills as |sVal sKey|}}
       {{log 'stat parameters' sKey sVal}}
-      <div class="stat-box ability" data-ability-id="{{sKey}}">
-        <label class="title ability-roll">{{localize (concat "DX3RD.Stats." (capitalizeFirst sKey))}}</label>
+      <div class="stat-box ability mainstat" data-ability-id="{{sKey}}">
+        <label class="title ability-roll skew stat-label">{{localize (concat "DX3RD.Stats." (capitalizeFirst sKey))}}</label>
         <a class="skill-create" data-ability-id="body"><i class="fas fa-plus" style="color: white;"></i></a>
-        <div class="value">
+        <div class="value skew">
           <input class="stat" type="text" name="system.attributes.{{sKey}}.value" value="{{stat ../actor sKey 'value'}}" disabled>
         </div>
         <div class="diamond">

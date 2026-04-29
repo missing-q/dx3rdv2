@@ -7,6 +7,7 @@
   --dx3rd-c-white: #ffffff;
   --dx3rd-c-black: #000000;
   --dx3rd-c-groove: #eeede0;
+  --dx3rd-c-highlight: #19499b;
 }
 
 /*
@@ -458,7 +459,9 @@
   left: 0;
   right: 0;
   transform: rotate(45deg);
-  border: 1px solid;
+  border: 1px solid var(--dx3rd-c-black);
+  background: var(--dx3rd-c-white);
+  z-index: -1;
 }
 .dx3rd .stat-box {
   position: relative;
@@ -535,6 +538,56 @@
 }
 .dx3rd .dice-info .slash {
   text-align: center;
+}
+.dx3rd .diamond {
+  position: absolute;
+  z-index: 2;
+  width: 2rem;
+  top: 0rem;
+  right: 0rem;
+}
+.dx3rd .highlight {
+  color: var(--dx3rd-c-highlight) !important;
+}
+.dx3rd .point {
+  width: 2rem;
+}
+.dx3rd .ability .value {
+  width: 3rem;
+  position: absolute;
+  top: 0.45rem;
+  right: 1.1rem;
+}
+.dx3rd .ability input {
+  border: none;
+  background: rgba(0, 0, 0, 0);
+}
+.dx3rd .ability .value::before {
+  background: var(--dx3rd-c-white);
+  border: 1px solid var(--dx3rd-c-black);
+  width: 2.5rem;
+  z-index: -2;
+}
+.dx3rd .ability .stat-label {
+  width: 5.7rem;
+}
+.dx3rd .ability .skill-create {
+  right: 4.2rem;
+  position: absolute;
+  top: 0.2rem;
+  z-index: 4;
+}
+.dx3rd .ability input {
+  text-align: center;
+  font-weight: bold;
+}
+.dx3rd .ability .stat-label {
+  width: 5.7rem;
+  font-size: large;
+}
+.dx3rd .ability .skill-box {
+  display: flex;
+  flex-direction: column;
 }
 .dx3rd .items-header {
   height: 28px;

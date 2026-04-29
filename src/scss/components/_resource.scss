@@ -36,7 +36,9 @@ select option {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
   transform: rotate(45deg);
-  border: 1px solid;
+  border: 1px solid $c-black;
+  background: $c-white;
+  z-index: -1;
 }
 
 .stat-box {
@@ -92,7 +94,6 @@ input.name {
   text-align: left;
 }
 
-
 .stat-box.dice {
   height: 2rem;
 }
@@ -120,7 +121,7 @@ input.diceval {
 }
 
 .dice-info input {
-  background-color:$c_white;
+  background-color:$c-white;
   text-align: center;
 }
 
@@ -130,4 +131,60 @@ input.diceval {
 
 .dice-info .slash {
   text-align: center;
+}
+
+.diamond {
+  position: absolute;
+  z-index: 2;
+  width: 2rem;
+  top: 0rem;
+  right: 0rem;
+}
+
+.highlight {
+  color: $c-highlight !important;
+}
+
+.point {
+  width: 2rem;
+}
+.ability .value {
+  width: 3rem;
+  position: absolute;
+  top: .45rem;
+  right: 1.1rem;
+}
+.ability input {
+  border: none;
+  background: $none;
+}
+.ability .value::before {
+  background: $c-white;
+  border: 1px solid $c-black;
+  width: 2.5rem;
+  z-index: -2;
+}
+
+.ability .stat-label {
+  width: 5.7rem;
+}
+
+.ability .skill-create {
+  right: 4.2rem;
+  position: absolute;
+  top: .2rem;
+  z-index: 4;
+}
+
+.ability input {
+  text-align: center;
+  font-weight: bold;
+}
+.ability .stat-label {
+  width: 5.7rem;
+  font-size:large;
+}
+.ability .skill-box {
+   display: flex;
+   flex-direction: column;
 }
