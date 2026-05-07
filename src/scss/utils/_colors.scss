@@ -1,5 +1,7 @@
 :root {
   --dx3rd-c-dark: #2d2d2d;
+  --dx3rd-c-dark-text: #191813;
+  --dx3rd-c-dark-text-secondary: #4b4a44;
   --dx3rd-c-faint: #c9c7b8;
   --dx3rd-c-beige: #b5b3a4;
   --dx3rd-c-tan: #444444;
@@ -30,4 +32,6 @@ $c-tan: var(--dx3rd-c-tan);
 
 $c-groove: var(--dx3rd-c-groove);
 $c-highlight: var(--dx3rd-c-highlight);
+$c-dark-text: var(--dx3rd-c-dark-text);
+$c-dark-text-secondary: var(--dx3rd-c-dark-text-secondary);
 $none: rgba(0,0,0,0);

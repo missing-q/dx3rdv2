@@ -82,6 +82,7 @@
           type='text'
           value='{{system.attributes.dice.universal.critical.min}}'
           data-dtype='Number'
+          disabled
           />
         </label>
       </div>
@@ -110,6 +111,7 @@
           type='text'
           value='{{system.attributes.exp.value}}'
           data-dtype='Number'
+          disabled
           />
           <span class="divider"><i class="fas fa-arrow-right"></i></span>
           <input
@@ -117,6 +119,7 @@
           type='text'
           value='{{system.attributes.exp.max}}'
           data-dtype='Number'
+          disabled
           />
         </div>
       </div>
@@ -130,6 +133,7 @@
           type='text'
           value='{{system.attributes.stock.value}}'
           data-dtype='Number'
+          disabled
           />
           <span class="divider"><i class="fas fa-arrow-right"></i></span>
           <input
@@ -137,6 +141,7 @@
           type='text'
           value='{{system.attributes.stock.max}}'
           data-dtype='Number'
+          disabled
           />
         </div>
       </div>
@@ -159,6 +164,7 @@
         <label class = "skew stat-label">{{localize "DX3RD.Actor.FIELDS.Attributes.HP"}}</label>
         <div class = "skew stat flexrow">
           <input
+          class = 'highlight'
           name='HP'
           type='text'
           value='{{system.attributes.hp.value}}'
@@ -170,6 +176,7 @@
           type='text'
           value='{{system.attributes.hp.max}}'
           data-dtype='Number'
+          disabled
           />
         </div>
       </div>
@@ -183,6 +190,7 @@
           type='text'
           value='{{system.attributes.initiative.value}}'
           data-dtype='Number'
+          disabled
           />
         </div>
       </div>
@@ -196,6 +204,7 @@
           type='text'
           value='{{system.attributes.move.combat}}'
           data-dtype='Number'
+          disabled
           />
           <span class="divider">/</i></span>
           <input
@@ -203,6 +212,7 @@
           type='text'
           value='{{system.attributes.move.full}}'
           data-dtype='Number'
+          disabled
           />
         </div>
       </div>
@@ -216,6 +226,7 @@
           type='text'
           value='{{system.attributes.saving.value}}'
           data-dtype='Number'
+          disabled
           />
           <span class="divider">/</i></span>
           <input
@@ -223,6 +234,7 @@
           type='text'
           value='{{system.attributes.saving.max}}'
           data-dtype='Number'
+          disabled
           />
         </div>
       </div>
@@ -247,7 +259,7 @@
         <div class="skill-box">
         {{#each sVal as |value key|}}
           <label class="skill" data-skill-id="{{key}}">
-            <span class="title skill-roll">{{localize (concat "DX3RD.Skills." (capitalizeFirst key))}}</span>
+            <span class="skew skill-roll">{{localize (concat "DX3RD.Skills." (capitalizeFirst key))}}</span>
             <a class="skill-edit"><i class="fas fa-edit" style="color: black;"></i></a>
           </label>
         {{/each}}

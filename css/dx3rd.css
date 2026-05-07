@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 :root {
   --dx3rd-c-dark: #2d2d2d;
+  --dx3rd-c-dark-text: #191813;
+  --dx3rd-c-dark-text-secondary: #4b4a44;
   --dx3rd-c-faint: #c9c7b8;
   --dx3rd-c-beige: #b5b3a4;
   --dx3rd-c-tan: #444444;
@@ -438,6 +440,12 @@
   text-align: center;
   font-weight: bold;
 }
+.dx3rd input {
+  color: var(--dx3rd-c-dark-text);
+}
+.dx3rd input:disabled {
+  color: var(--dx3rd-c-dark-text-secondary);
+}
 .dx3rd select option {
   color: var(--dx3rd-c-black);
   text-align: center;
@@ -468,6 +476,7 @@
   margin-bottom: 1rem;
   margin-top: 0px;
   flex: 1;
+  gap: 0;
 }
 .dx3rd .stat-label {
   display: flex;
@@ -507,6 +516,7 @@
 }
 .dx3rd input.name {
   text-align: left;
+  padding-left: 1rem;
 }
 .dx3rd .stat-box.dice {
   height: 2rem;
@@ -521,6 +531,7 @@
 .dx3rd .divider {
   flex: none;
   z-index: 1;
+  color: var(--dx3rd-c-dark-text-secondary);
 }
 .dx3rd .stat-grid {
   display: flex;
@@ -542,15 +553,18 @@
 .dx3rd .diamond {
   position: absolute;
   z-index: 2;
-  width: 2rem;
+  width: 1.7rem;
+  height: 1.7rem;
   top: 0rem;
   right: 0rem;
 }
 .dx3rd .highlight {
   color: var(--dx3rd-c-highlight) !important;
+  font-weight: bold !important;
 }
 .dx3rd .point {
-  width: 2rem;
+  width: inherit;
+  height: inherit;
 }
 .dx3rd .ability .value {
   width: 3rem;
@@ -561,6 +575,9 @@
 .dx3rd .ability input {
   border: none;
   background: rgba(0, 0, 0, 0);
+  text-align: center;
+  font-weight: bold;
+  box-shadow: none;
 }
 .dx3rd .ability .value::before {
   background: var(--dx3rd-c-white);
@@ -577,9 +594,8 @@
   top: 0.2rem;
   z-index: 4;
 }
-.dx3rd .ability input {
-  text-align: center;
-  font-weight: bold;
+.dx3rd input.stat {
+  padding-left: 0px;
 }
 .dx3rd .ability .stat-label {
   width: 5.7rem;
@@ -588,6 +604,32 @@
 .dx3rd .ability .skill-box {
   display: flex;
   flex-direction: column;
+}
+.dx3rd .ability .skill-roll::before {
+  background-color: var(--dx3rd-c-white);
+  border: 2px solid darkslategray;
+  z-index: -1;
+  top: -0.25rem;
+}
+.dx3rd .ability .skill-roll {
+  text-align: center;
+  display: inline-block;
+  width: 95%;
+  position: relative;
+  height: 1.5rem;
+  align-content: center;
+  font-weight: 600;
+}
+.dx3rd .ability .skill-edit {
+  position: absolute;
+  right: 1rem;
+  padding-top: 0.2rem;
+}
+.dx3rd .ability .skill {
+  z-index: 2;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 0.5rem;
 }
 .dx3rd .items-header {
   height: 28px;
